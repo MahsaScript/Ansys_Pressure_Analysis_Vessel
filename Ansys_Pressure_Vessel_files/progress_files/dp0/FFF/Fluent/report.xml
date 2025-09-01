@@ -1,0 +1,860 @@
+<FluentXMLReport>
+<version>
+Fluent
+Version: 3d, dp, pbns, lam (3d, double precision, pressure-based, laminar)
+Release: 20.1.0
+Title: 
+</version>
+
+<Models>
+
+Models
+------
+
+   Model                        Settings   
+   -------------------------------------
+   Space                        3D         
+   Time                         Steady     
+   Viscous                      Laminar    
+   Heat Transfer                Enabled    
+   Solidification and Melting   Disabled   
+   Radiation                    None       
+   Species                      Disabled   
+   Coupled Dispersed Phase      Disabled   
+   NOx Pollutants               Disabled   
+   SOx Pollutants               Disabled   
+   Soot                         Disabled   
+   Mercury Pollutants           Disabled   
+   Structure                    Disabled   
+
+</Models>
+
+<MaterialProperties>
+Material Properties
+-------------------
+
+   Material: steel (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   8030       
+      Cp (Specific Heat)     j/kg-k   constant   502.48     
+      Thermal Conductivity   w/m-k    constant   16.27      
+
+   Material: water-liquid (fluid)
+
+      Property                        Units     Method     Value(s)   
+      -------------------------------------------------------------
+      Density                         kg/m3     constant   998.2      
+      Cp (Specific Heat)              j/kg-k    constant   4182       
+      Thermal Conductivity            w/m-k     constant   0.6        
+      Viscosity                       kg/m-s    constant   0.001003   
+      Molecular Weight                kg/kmol   constant   18.0152    
+      Thermal Expansion Coefficient   1/k       constant   0          
+      Speed of Sound                  m/s       none       #f         
+
+   Material: air (fluid)
+
+      Property                        Units     Method     Value(s)     
+      ---------------------------------------------------------------
+      Density                         kg/m3     constant   1.225        
+      Cp (Specific Heat)              j/kg-k    constant   1006.43      
+      Thermal Conductivity            w/m-k     constant   0.0242       
+      Viscosity                       kg/m-s    constant   1.7894e-05   
+      Molecular Weight                kg/kmol   constant   28.966       
+      Thermal Expansion Coefficient   1/k       constant   0            
+      Speed of Sound                  m/s       none       #f           
+
+   Material: aluminum (solid)
+
+      Property               Units    Method     Value(s)   
+      ---------------------------------------------------
+      Density                kg/m3    constant   2719       
+      Cp (Specific Heat)     j/kg-k   constant   871        
+      Thermal Conductivity   w/m-k    constant   202.4      
+
+</MaterialProperties>
+
+<CellZoneConditions>
+Cell Zone Conditions
+--------------------
+
+   Zones
+
+      name                                          id   type    
+      --------------------------------------------------------
+      pressure_vessel-freeparts_boss-extrude17      31   fluid   
+      pressure_vessel-freeparts_boss-extrude14_1_   32   fluid   
+      pressure_vessel-freeparts_boss-extrude14_3_   33   fluid   
+      pressure_vessel-freeparts_boss-extrude12      34   fluid   
+      pressure_vessel-freeparts_boss-extrude2_2_    35   fluid   
+      pressure_vessel-freeparts_mirror26            36   fluid   
+      pressure_vessel-freeparts_boss-extrude13      37   fluid   
+      pressure_vessel-freeparts_mirror27_2_         38   fluid   
+      pressure_vessel-freeparts_boss-extrude14_2_   39   fluid   
+      pressure_vessel-freeparts_boss-extrude6_3_    40   fluid   
+      pressure_vessel-freeparts_mirror27_1_         41   fluid   
+      pressure_vessel-freeparts_boss-extrude6_2_    42   fluid   
+      pressure_vessel-freeparts_boss-extrude6_1_    43   fluid   
+      pressure_vessel-freeparts_boss-extrude2_1_    44   fluid   
+      pressure_vessel-freeparts_cut-extrude7        45   fluid   
+
+   Setup Conditions
+
+      pressure_vessel-freeparts_boss-extrude17
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude14_1_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude14_3_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude12
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude2_2_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_mirror26
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude13
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_mirror27_2_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude14_2_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude6_3_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_mirror27_1_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude6_2_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude6_1_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_boss-extrude2_1_
+
+         Condition       Value   
+         ---------------------
+         Material Name   air     
+         Frame Motion?   no      
+
+      pressure_vessel-freeparts_cut-extrude7
+
+         Condition       Value   
+         ---------------------
+         Frame Motion?   no      
+
+</CellZoneConditions>
+
+<BoundaryConditions>
+Boundary Conditions
+-------------------
+
+   Zones
+
+      name                                                                                                   id    type        
+      ----------------------------------------------------------------------------------------------------------------------
+      wall-112                                                                                               112   wall        
+      wall-111                                                                                               111   wall        
+      wall-109                                                                                               109   wall        
+      wall-108                                                                                               108   wall        
+      wall-106                                                                                               106   wall        
+      wall-105                                                                                               105   wall        
+      wall-103                                                                                               103   wall        
+      wall-102                                                                                               102   wall        
+      wall-100                                                                                               100   wall        
+      wall-99                                                                                                99    wall        
+      wall-97                                                                                                97    wall        
+      wall-96                                                                                                96    wall        
+      wall-94                                                                                                94    wall        
+      wall-93                                                                                                93    wall        
+      wall-91                                                                                                91    wall        
+      wall-90                                                                                                90    wall        
+      wall-88                                                                                                88    wall        
+      wall-87                                                                                                87    wall        
+      wall-85                                                                                                85    wall        
+      wall-84                                                                                                84    wall        
+      wall-82                                                                                                82    wall        
+      wall-81                                                                                                81    wall        
+      wall-80                                                                                                80    wall        
+      wall-79                                                                                                79    wall        
+      wall-75                                                                                                75    wall        
+      wall-74                                                                                                74    wall        
+      wall-pressure_vessel-freeparts_boss-extrude17                                                          1     wall        
+      wall-pressure_vessel-freeparts_boss-extrude14_1_                                                       2     wall        
+      wall-pressure_vessel-freeparts_boss-extrude14_3_                                                       3     wall        
+      wall-pressure_vessel-freeparts_boss-extrude12                                                          4     wall        
+      wall-pressure_vessel-freeparts_boss-extrude2_2_                                                        5     wall        
+      wall-pressure_vessel-freeparts_mirror26                                                                6     wall        
+      wall-pressure_vessel-freeparts_boss-extrude13                                                          7     wall        
+      wall-pressure_vessel-freeparts_mirror27_2_                                                             8     wall        
+      wall-pressure_vessel-freeparts_boss-extrude14_2_                                                       9     wall        
+      wall-pressure_vessel-freeparts_boss-extrude6_3_                                                        10    wall        
+      wall-pressure_vessel-freeparts_mirror27_1_                                                             11    wall        
+      wall-pressure_vessel-freeparts_boss-extrude6_2_                                                        12    wall        
+      wall-pressure_vessel-freeparts_boss-extrude6_1_                                                        13    wall        
+      wall-pressure_vessel-freeparts_boss-extrude2_1_                                                        14    wall        
+      wall-pressure_vessel-freeparts_cut-extrude7                                                            15    wall        
+      contact_region-src                                                                                     48    interface   
+      contact_region-trg                                                                                     49    interface   
+      contact_region_10-contact_region_12-contact_region_13-src                                              50    interface   
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_3_   51    interface   
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_2_   52    interface   
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_1_   53    interface   
+      contact_region_11-src                                                                                  54    interface   
+      contact_region_11-trg                                                                                  55    interface   
+      contact_region_14-src                                                                                  56    interface   
+      contact_region_14-trg                                                                                  57    interface   
+      contact_region_2-src                                                                                   58    interface   
+      contact_region_2-trg                                                                                   59    interface   
+      contact_region_3-src                                                                                   60    interface   
+      contact_region_3-trg                                                                                   61    interface   
+      contact_region_4-src                                                                                   62    interface   
+      contact_region_4-trg                                                                                   63    interface   
+      contact_region_5-src                                                                                   64    interface   
+      contact_region_5-trg                                                                                   65    interface   
+      contact_region_6-src                                                                                   66    interface   
+      contact_region_6-trg                                                                                   67    interface   
+      contact_region_7-src                                                                                   68    interface   
+      contact_region_7-trg                                                                                   69    interface   
+      contact_region_8-src                                                                                   70    interface   
+      contact_region_8-trg                                                                                   71    interface   
+      contact_region_9-src                                                                                   72    interface   
+      contact_region_9-trg                                                                                   73    interface   
+
+   Setup Conditions
+
+      wall-112
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-111
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-109
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-108
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-106
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-105
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-103
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-102
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-100
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-99
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-97
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-96
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-94
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-93
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-91
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-90
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-88
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-87
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-85
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-84
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-82
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-81
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-80
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-79
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-75
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-74
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude17
+
+         Condition                                            Value   
+         ----------------------------------------------------------
+         Wall Thickness (m)                                   1       
+         Heat Generation Rate (w/m3)                          500     
+         Thermal BC Type                                      5       
+         Convective Heat Transfer Coefficient (w/m2-k)        200     
+         Wall Motion                                          1       
+         Shear Boundary Condition                             0       
+         Define wall motion relative to adjacent cell zone?   yes     
+
+      wall-pressure_vessel-freeparts_boss-extrude14_1_
+
+         Condition                                            Value   
+         ----------------------------------------------------------
+         Wall Thickness (m)                                   1       
+         Heat Generation Rate (w/m3)                          700     
+         Thermal BC Type                                      1       
+         Heat Flux (w/m2)                                     1900    
+         Wall Motion                                          1       
+         Shear Boundary Condition                             0       
+         Define wall motion relative to adjacent cell zone?   yes     
+         Velocity Magnitude (m/s)                             0.3     
+         X-Component of Wall Translation                      0.1     
+         Y-Component of Wall Translation                      0.1     
+         Z-Component of Wall Translation                      0.1     
+
+      wall-pressure_vessel-freeparts_boss-extrude14_3_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude12
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude2_2_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_mirror26
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude13
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_mirror27_2_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude14_2_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude6_3_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_mirror27_1_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude6_2_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude6_1_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_boss-extrude2_1_
+
+         Condition                  Value      
+         -----------------------------------
+         Material Name              aluminum   
+         Thermal BC Type            1          
+         Wall Motion                0          
+         Shear Boundary Condition   0          
+
+      wall-pressure_vessel-freeparts_cut-extrude7
+
+         Condition                  Value   
+         --------------------------------
+         Thermal BC Type            1       
+         Wall Motion                0       
+         Shear Boundary Condition   0       
+
+      contact_region-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_10-contact_region_12-contact_region_13-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_3_
+
+         Condition   Value   
+         -----------------
+
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_2_
+
+         Condition   Value   
+         -----------------
+
+      contact_region_10-contact_region_12-contact_region_13-trg-pressure_vessel-freeparts_boss-extrude6_1_
+
+         Condition   Value   
+         -----------------
+
+      contact_region_11-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_11-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_14-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_14-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_2-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_2-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_3-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_3-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_4-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_4-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_5-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_5-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_6-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_6-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_7-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_7-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_8-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_8-trg
+
+         Condition   Value   
+         -----------------
+
+      contact_region_9-src
+
+         Condition   Value   
+         -----------------
+
+      contact_region_9-trg
+
+         Condition   Value   
+         -----------------
+
+</BoundaryConditions>
+
+<SolverSettings>
+Solver Settings
+---------------
+
+   Equations
+
+      Equation   Solved   
+      -----------------
+      Flow       yes      
+      Energy     yes      
+
+   Numerics
+
+      Numeric                         Enabled   
+      ---------------------------------------
+      Absolute Velocity Formulation   yes       
+
+   Relaxation
+
+      Variable      Relaxation Factor   
+      -------------------------------
+      Pressure      0.3                 
+      Density       1                   
+      Body Forces   1                   
+      Momentum      0.7                 
+      Energy        1                   
+
+   Linear Solver
+
+      Variable     Solver Type   Termination Criterion   Residual Reduction Tolerance   
+      -------------------------------------------------------------------------------
+      Pressure     V-Cycle       0.1                                                    
+      X-Momentum   Flexible      0.1                     0.7                            
+      Y-Momentum   Flexible      0.1                     0.7                            
+      Z-Momentum   Flexible      0.1                     0.7                            
+      Energy       F-Cycle       0.1                                                    
+
+   Pressure-Velocity Coupling
+
+      Parameter   Value    
+      ------------------
+      Type        SIMPLE   
+
+   Discretization Scheme
+
+      Variable   Scheme                
+      ------------------------------
+      Pressure   Second Order          
+      Momentum   Second Order Upwind   
+      Energy     Second Order Upwind   
+
+   Solution Limits
+
+      Quantity                    Limit   
+      ---------------------------------
+      Minimum Absolute Pressure   1       
+      Maximum Absolute Pressure   5e+10   
+      Minimum Temperature         1       
+      Maximum Temperature         5000    
+
+</SolverSettings>
+
+</FluentXMLReport>
